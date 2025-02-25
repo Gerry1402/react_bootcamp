@@ -1,0 +1,67 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+}
+#ahorcado{
+    background-image: url('https://pablomonteserin.com/wp-content/uploads/2024/05/ahorcado.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 97%;
+    img{
+        height: 100%;
+        width: calc(100%);
+        visibility: hidden;
+        display: block;
+    }
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+#texto{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    .input{
+        position: absolute;
+        display: flex;
+        gap: 0.4rem;
+        bottom: 0;
+        margin: 0.4rem;
+        width: 99%;
+        input{
+            width: 100%;
+            padding: 1rem;
+        }
+        input, button{
+            border-radius: 1rem;
+            -webkit-border-radius: 1rem;
+            -moz-border-radius: 1rem;
+            -ms-border-radius: 1rem;
+            -o-border-radius: 1rem;
+        }
+    }
+    #cabecera{
+        position: absolute;
+        top: 0;
+        display: flex;
+        background-color: aqua;
+        right: 0;
+        left: 0;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+    #palabra{
+        font-size: xx-large;
+    }
+}

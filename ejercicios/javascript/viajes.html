@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viajes</title>
+</head>
+<body>
+    <script>
+        
+        let numNoches;
+        while (isNaN(numNoches)){
+            numNoches = prompt('Numero de noches:');
+        }
+        numNoches = Number(numNoches);
+        
+
+        const ciudades = {
+                'Oviedo': 15,
+                'Tokyo': 700,
+                'Madrid': 90,
+                'Barcelona': 90
+            };
+        let destino = '';
+        while (!(destino in ciudades)){
+            destino = prompt('Destino:')
+        }
+
+        const costeHotel = (noches) => noches*140;
+        const costeAvion = (ciudad) => numNoches > 3 ? ciudades[ciudad] * 0.9: ciudades[ciudad];
+        const costeAlquilerCoche = (noches) =>{
+            let descuento = 0;
+            if (noches > 3){
+                descuento = 20
+            }
+            if (noches > 7){
+                descuento = 50
+            }
+            return noches * 40 - descuento
+        }
+
+        const resultado1 = Number(costeHotel(numNoches));
+        const resultado2 = Number(costeAvion(destino, numNoches));
+        const resultado3 = Number(costeAlquilerCoche(numNoches));
+
+        console.log("Coste hotel: " + resultado1);
+        console.log("Coste viaje: ", resultado2);
+        console.log("Coste alquiler coche: ", resultado3);
+        console.log("Total:", resultado1 + resultado2 + resultado3); 
+    </script>
+</body>
+</html>

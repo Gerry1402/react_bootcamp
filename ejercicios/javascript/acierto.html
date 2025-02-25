@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acertar</title>
+</head>
+<body>
+    <script>
+        const num = Math.floor(Math.random()*4)+1;
+        window.alert(`El numero secreto a adivinar es ${num}`);
+        const elegido = Number(prompt('Marca un numero entre 1 y 5 (ambos incluidos)'));
+        window.alert(num === elegido ? 'acierto' : 'error')
+    </script>
+</body>
+</html>

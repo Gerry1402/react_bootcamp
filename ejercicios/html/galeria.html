@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        #galeria{
+            display: grid;
+            grid-template-columns: 2;
+            grid-template-rows: 3;
+        }
+        #galeria img{
+            width: 100%;
+            justify-self: center center;
+        }
+        #galeria .grande{
+            grid-column: 2;
+            grid-row: 1 / 4;
+            height: 100%;
+            width: auto;
+        }
+    </style>
+        
+</head>
+<body>
+    <div id="galeria">
+        <img src="./web/02/pic01.jpg" alt="" class="grande">
+        <img src="./web/02/pic02.jpg" alt="" class="">
+        <img src="./web/02/pic03.jpg" alt="" class="">
+        <img src="./web/02/pic04.jpg" alt="" class="">
+    </div>
+</body>
+</html>

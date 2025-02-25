@@ -1,0 +1,255 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Página web responsive | Pablo Monteserín</title>
+    <meta name="description"
+        content="Maquetación de una página responsive con HTML y CSS, utilizando media queries para cargar las hojas de estilos en función del tamaño del dispositivo">
+    <meta name="robots" content="noindex, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!--EOF media queries -->
+    <!-- La siguiente linea es para que versiones viejas de IE puedan asignar estilos al contenido de las nuevas etiquetas semánticas-->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <![endif]-->
+    <style>
+        body {
+        background: url(https://pablomonteserin.com/res/html5/ex/ejercicios-responsive/mobile-first/resuelto/img/background.png);
+        margin: 0;
+        font-family: arial;
+        }
+
+        #wrapper {
+        max-width: 980px;
+        margin: 0px auto 0px auto;
+        background: rgba(186, 183, 179, 0.2);
+        position: relative;
+        }
+
+        header {
+        height: 75px;
+        background: url("https://pablomonteserin.com/res/html5/ex/ejercicios-responsive/mobile-first/resuelto/img/pablomonteserin_small.png") center 0 no-repeat;
+        background-position: center;
+        position: relative;
+        }
+        header img{
+            display: block;
+        }
+
+        header a.logo {
+        background: url("https://pablomonteserin.com/res/html5/ex/ejercicios-responsive/mobile-first/resuelto/img/logo_small.png");
+        position: absolute;
+        right: 10px;
+        top: 40px;
+        width: 40px;
+        height: 32px;
+        display: block;
+        }
+
+        nav {
+        background: #333;
+        margin: 0;
+        text-align: center;
+        display: block;
+        padding: 0;
+        }
+
+        nav li {
+        display: block;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        }
+
+        nav a {
+        padding: 10px;
+        color: black;
+        display: block;
+        text-decoration: none;
+        width: 80%;
+        transition: 1s;
+        color: white;
+        border-bottom: 1px solid grey;
+        margin: 0 auto;
+        }
+
+        nav a:hover {
+        background: grey;
+        color: white;
+        }
+
+        nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        }
+
+        article {
+        text-align: center;
+        margin: auto;
+        width: 95%;
+        border-bottom: 1px solid grey;
+        }
+
+        article p {
+        font-size: 18px;
+        margin-bottom: 10px;
+        }
+
+        .promo_container {
+        width: 95%;
+        margin: auto;
+        text-align: center;
+        }
+
+        .promo {
+        padding-left: 10px;
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+        border-bottom: 1px solid grey;
+        }
+
+        .promo div {
+        vertical-align: top;
+        display: inline-block;
+        }
+
+        .img_logo {
+        margin-top: 18.72px;
+        width: 35%;
+        height: 79px;
+        background: red;
+        background: url(https://pablomonteserin.com/res/html5/ex/ejercicios-responsive/mobile-first/resuelto/img/logo_medium.png) no-repeat;
+        }
+
+        .content {
+        width: 65%;
+        text-align: left;
+        }
+
+        footer {
+        background: black;
+        color: white;
+        }
+        
+        @media (min-width: 1024px){
+            header {
+                height: auto;
+                background: url("https://pablomonteserin.com/res/html5/ex/ejercicios-responsive/mobile-first/resuelto/img/pablomonteserin.png") center 0 no-repeat;
+                background-size: contain;
+                position: relative;
+            }
+            header img{
+                width: 100%;
+            }
+            header a.logo {
+                right: auto;
+                top: auto;
+                left: 10px;
+                bottom: 10px;
+            }
+
+            nav a {
+                width: auto;
+            }
+
+            nav ul {
+            display: flex;
+            justify-content: center;
+            }
+
+            .promo_container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            }
+
+            .promo {
+            padding: 0;
+            display: block;
+            width: 18%;
+            min-width: 200px;
+            border-bottom: none;
+            }
+
+            .img_logo {
+            width: 80%;
+            }
+
+            .content {
+            width: 100%;
+            text-align: left;
+            }
+
+            footer {
+            background: black;
+            color: white;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <img style="visibility: hidden;" src="https://pablomonteserin.com/res/html5/ex/ejercicios-responsive/mobile-first/resuelto/img/pablomonteserin.png" alt="">
+            <a class="logo" href="#"></a>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+
+
+        </nav>
+        <article>
+            <h1>Ejemplo responsive</h1>
+            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+        </article>
+
+
+        <div class="promo_container">
+            <div class="promo one">
+                <div class="img_logo">
+                </div>
+                <div class="content">
+                    <h3>Promo 1</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
+                    </p>
+                </div>
+            </div>
+            <div class="promo two">
+                <div class="img_logo">
+                </div>
+                <div class="content">
+                    <h3>Promo 2</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+                </div>
+            </div>
+            <div class="promo three">
+                <div class="img_logo">
+                </div>
+                <div class="content">
+                    <h3>Promo 3</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+                </div>
+            </div>
+        </div>
+        <footer>
+            &copy;PabloMonteserin
+        </footer>
+    </div>
+</body>
+
+</html>

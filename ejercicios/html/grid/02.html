@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Display grid propuesto</title>
+	<meta charset="UTF-8">
+	<meta name="robots" content="noindex, follow">
+
+	<style>
+        .container{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+		.box {
+			padding: 20px 50px;
+		}
+
+		.rosa {
+			background: pink;
+            grid-column: 2;
+		}
+
+		.azul {
+			background: blue;
+            grid-row: 1/3;
+		}
+
+		.naranja {
+			background: orange;
+            grid-column: 2;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+        <div class="box rosa">1</div>
+		<div class="box azul">2</div>
+		<div class="box naranja">3</div>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            padding: 10px;
+            border: 1px solid black;
+            margin-bottom: 20px;
+            border-radius: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p><input type="radio" name="diseno" value="50">El cliente me suministra el diseño</p>
+        <p><input type="radio" name="diseno" value="100">Yo me encargo del diseño</p>
+    </div>
+    <div>
+        <p><input type="radio" name="carrito" value="120">La página no incorpora carrito de la compra</p>
+        <p><input type="radio" name="carrito" value="180">La página incorpora un carrito de la compra</p>
+    </div>
+    <div>
+        <p><input type="radio" name="suscripcion" value="40">La página no permite suscripción</p>
+        <p><input type="radio" name="suscripcion" value="120">La página permite suscripción</p>
+    </div>
+    <div id="resultado" style="display: none;">
+    </div>
+    <script>
+
+        
+        let panelResultado = document.querySelector('#resultado');
+        let resultado;
+        document.querySelectorAll('input[type="radio"]').forEach(element => {
+            element.addEventListener('click', function() {
+                document.querySelectorAll('input[type="radio"]:checked').map(element => Number(element.value));
+                console.log(document.querySelectorAll('input[type="radio"]:checked').map(element => Number(element.value)));
+                panelResultado.style.display = 'block';
+                panelResultado.textContent = resultado;
+            })
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        #container{
+            height: 500px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .rectangulo{
+            width: 50%;
+            height: 50%;
+        }
+        .rojo{
+            background-color: lightcoral;
+            border: 3px solid red;
+        }
+        .verde{
+            background-color: lightgreen;
+            border: 3px solid green;
+        }
+        .azul{
+            background-color: lightskyblue;
+            border: 3px solid blue;
+        }
+        .naranja{
+            background-color: lightsalmon;
+            border: 3px solid orange;
+        }
+        .lila{
+            background-color: lightpink;
+            border: 3px solid purple;
+        }
+        .superpuesto{
+            position: relative;
+            top: -75%;
+            left: 25%;
+        }
+        .rectangulo:hover{
+            z-index: 3;
+        }
+        h1{
+            text-align: center;
+        }
+        .box{
+            background-color: bisque;
+            border: 3px solid burlywood;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Leyes de murphy</h1>
+    <div class="box">
+        <p>Cualquier cosa que pueda ir mal, ... irá mal.</p>
+    </div>
+    <div id="container">
+        <div class="rectangulo rojo"></div>
+        <div class="rectangulo verde"></div>
+        <div class="rectangulo azul"></div>
+        <div class="rectangulo naranja"></div>
+        <div class="rectangulo lila superpuesto"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        @font-face {
+            font-family: 'Roboto';
+            src: url(./02/Roboto-Thin.ttf);
+        }
+        body{
+            font-family: 'Roboto', sans-serif;
+            color: #BCBCBC;
+            margin: 0;
+            padding: 0;
+            background-image: url(./02/header.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        h1, h3{
+            color: #79798C;
+        }
+        nav{
+            background-color: rgba(0, 0, 0, 0.25);
+            color: white;
+            margin: 0;
+            padding: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            ul {
+                list-style: none;
+                display: flex;
+                justify-content: center;
+                margin: 0;
+                padding: 0;
+                li:not(li:first-child){
+                border-left: 1px solid white;
+                }
+                li a{
+                    text-decoration: none;
+                    color: white;
+                    padding: 20px;
+                    display: block;
+                    height: 100%;
+                    text-transform: uppercase;
+                }
+            }
+        }
+        .vacio{
+            display: block;padding: 6rem;
+            color: white;
+            text-align: center;
+        }
+        #content{
+            background-color: white;
+            padding: 2rem;
+            text-align: center;
+            width: 90%;
+            margin: auto;
+        }
+        #content> h1{
+            margin: 0;
+            padding: 0;
+        }
+
+        #content> p{
+            border-bottom: 1px solid #BCBCBC;
+            padding-bottom: 1rem;
+        }
+
+        .dgrid3{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+        button{
+            background-color: #72AC80;
+            color: white;
+            border: none;
+            padding: 0.5rem;
+            width: 100%;
+            cursor: pointer;
+            font-weight:50;
+        }
+        .dflex{
+            padding-top: 2rem;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .dflex .elem{
+            width: 100%;
+        }
+
+        .dflex img{
+            width: 100%;
+            height: auto;
+        }
+        footer{
+            background-color: rgba(0, 0, 0, 1);
+            color: white;
+            margin: 0;
+            padding: 1rem;
+            text-align: center;
+            display: block;
+        }
+        footer h2{
+            margin-bottom: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Paci2</a></li>
+                <li><a href="#">Paci3</a></li>
+            </ul>
+        </nav>
+        <span class="vacio">
+            &nbsp;
+        </span>
+        <div id="content">
+            <h1>
+                Maquetación de una web con HTML y CSS
+            </h1>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis nihil qui amet, minima quis quidem atque maxime voluptatem commodi nisi architecto, libero vel explicabo eaque facere perspiciatis eum error autem?
+            </p>
+            <div class="dgrid3">
+                <div class="gcol">
+                    <h3>bala bla bla</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut error sapiente praesentium hic eveniet quas, nam alias rem quia. Quae quo ducimus nesciunt? Repellat, placeat nam nobis earum rem accusamus?</p>
+                    <button>Read More</button>
+                </div>
+                <div class="gcol">
+                    <h3>bala bla bla</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut error sapiente praesentium hic eveniet quas, nam alias rem quia. Quae quo ducimus nesciunt? Repellat, placeat nam nobis earum rem accusamus?</p>
+                    <button>Read More</button>
+                </div>
+                <div class="gcol">
+                    <h3>bala bla bla</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut error sapiente praesentium hic eveniet quas, nam alias rem quia. Quae quo ducimus nesciunt? Repellat, placeat nam nobis earum rem accusamus?</p>
+                    <button>Read More</button>
+                </div>
+            </div>
+            <div class="dflex">
+                <div class="elem">
+                    <img src="./02/pic01.jpg" alt="">
+                    <h3>bla bla bla</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci magnam accusantium itaque magni expedita, doloribus quasi odio aperiam perferendis similique? Est et, cupiditate error ullam nostrum impedit deleniti maxime laboriosam!</p>
+                </div>
+                <div class="elem">
+                    <img src="./02/pic02.jpg" alt="">
+                    <h3>bla bla bla</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci magnam accusantium itaque magni expedita, doloribus quasi odio aperiam perferendis similique? Est et, cupiditate error ullam nostrum impedit deleniti maxime laboriosam!</p>
+                </div>
+                <div class="elem">
+                    <img src="./02/pic03.jpg" alt="">
+                    <h3>bla bla bla</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci magnam accusantium itaque magni expedita, doloribus quasi odio aperiam perferendis similique? Est et, cupiditate error ullam nostrum impedit deleniti maxime laboriosam!</p>
+                </div>
+                <div class="elem">
+                    <img src="./02/pic04.jpg" alt="">
+                    <h3>bla bla bla</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci magnam accusantium itaque magni expedita, doloribus quasi odio aperiam perferendis similique? Est et, cupiditate error ullam nostrum impedit deleniti maxime laboriosam!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <span class="vacio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi assumenda vitae libero vel, cumque ullam ducimus nostrum ad tempora! Placeat deleniti doloribus, necessitatibus veritatis architecto eum soluta qui nostrum ducimus!</span>
+    <footer>
+        <h2>bla bla bla</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, aut illum suscipit reiciendis cupiditate laboriosam aperiam expedita nulla eligendi omnis optio recusandae neque officiis velit quam reprehenderit provident porro iure!</p>
+        <p>bla bla bla</p>
+    </footer>
+</body>
+</html>

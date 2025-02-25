@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="nombre">Nombre del cliente:</label>
+    <input type="text" name="nombre" id="nombre"><br>
+    <br>
+    <label for="material">Materiales de la caja:</label>
+    <select name="material" id="material">
+        <option value="plastico">Plastico</option>
+        <option value="carton">Carton</option>
+        <option value="metal">Metal</option>
+    </select><br>
+    <br>
+    <label for="dimensiones">Seleccione unas dimensiones para la caja:</label><br>
+    <input type="radio" name="dimensiones" class="radiusBtn" value="diminutas">Diminutas <br>
+    <input type="radio" name="dimensiones" class="radiusBtn" value="medianas">Medianas<br>
+    <input type="radio" name="dimensiones" class="radiusBtn" value="grande">Grande<br>
+    <br>
+    <label for="comentarios">Comentarios:</label><br>
+    <textarea name="comentarios" id="comentarios" rows="6"></textarea><br>
+    <br>
+    <button type="button" onclick="frase()">Enviar</button><br>
+    <br>
+    <p id="resultado" style = 'border: 1px solid black;display: none;'></p>
+    <script>
+        const frase = () => {
+            const nombre = document.querySelector('#nombre').value
+            const material = document.querySelector('#material').value
+            const dimensiones = document.querySelector('[name=dimensiones]:checked').value
+            const comentarios = document.querySelector('#comentarios').value.trim()
+            const resultado = document.querySelector('#resultado')
+            resultado.style.display = 'block'
+            resultado.textContent = `${nombre} ha pedido una caja de ${material} con unas dimensiones ${dimensiones}. ${comentarios}`
+        }
+    </script>
+</body>
+</html>

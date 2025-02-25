@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div style="background: url(./img/bluemap.jpg); margin:auto; background-size: contain;">
+        <img src="./img/bluemap.jpg" alt="" style="visibility: hidden;max-width: 100%; max-height: 100vh; margin:auto; display: block;">
+    </div>
+    <script>
+        const insertar = "https://pablomonteserin.com/res/javascript-es6/ex/mapa/img/goldcoin.png"
+        const image = document.querySelector('div');
+        const innerHTMLOriginal = image.innerHTML;
+        const width = 9;
+        const height = 9;
+        console.log(image.clientWidth, image.clientHeight);
+        for (let index = 0; index < 10; index++) {
+            let left = Math.floor(Math.random()*(image.clientWidth-width));
+            let top = Math.floor(Math.random()*(image.clientHeight-height));
+            image.innerHTML += `<img src="${insertar}" style="width:${width}px;position:absolute; left:${left}px; top:${top}px">`
+        }
+
+    </script>
+</body>
+</html>

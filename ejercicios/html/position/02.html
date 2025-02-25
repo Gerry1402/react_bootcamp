@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        #container{
+            display: flex;
+            justify-content: start;
+            align-items: stretch;
+        }
+        p:first-child{
+            margin-top: 0;
+        }
+        p:last-child{
+            margin-bottom: 0;
+        }
+        .enlaces{
+            width: 150px;
+        }
+        .texto{
+            z-index: -1;
+        }
+        .enlaces a{
+            text-decoration: none;
+            display: block;
+            color: black;
+            width: 150px;
+            padding: 10px;
+            background-color: aquamarine;
+            border-radius: 10px;
+            transition: 2s;
+        }
+        .enlaces a:hover{
+            background-color: salmon;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Barra de navegación vertical animada</h1>
+    <div id="container">
+        <div class="enlaces">
+            <a href="#">Enlace</a>
+            <a href="#">Enlace</a>
+            <a href="#">Enlace</a>
+            <a href="#">Enlace</a>
+            <a href="#">Enlace</a>
+        </div>
+        <div class="texto">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur sapiente obcaecati, perspiciatis odit dicta error culpa harum itaque dolorem eos ea fugit a voluptatum tenetur alias in minima maxime veniam.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur sapiente obcaecati, perspiciatis odit dicta error culpa harum itaque dolorem eos ea fugit a voluptatum tenetur alias in minima maxime veniam.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur sapiente obcaecati, perspiciatis odit dicta error culpa harum itaque dolorem eos ea fugit a voluptatum tenetur alias in minima maxime veniam.</p>
+        </div>
+    </div>
+</body>
+</html>

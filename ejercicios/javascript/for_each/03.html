@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <p>¿Que super heroe es más fuerte?</p>
+        <p><input type="radio" name="superheroe"/>Batman</p>
+        <p><input type="radio" name="superheroe" class="correcto" />Superman</p>
+        <p>¿En qué consiste el sentido aracnido de Spiderman?</p>
+        <p><input type="radio" name="spiderman"/>Puede detectar cuando hay arañas cerca.</p>
+        <p><input type="radio" name="spiderman" class="correcto"/>Puede detectar cuando hay un peligro cerca.</p>
+        <p>¿Cuál es el verdadero nombre de Spiderman?</p>
+        <p><input type="radio" name="nombre" class="correcto"/>Peter Parker</p>
+        <p><input type="radio" name="nombre" />Bruce Wayne</p>
+        <button type="button" onclick="comprobar()">Comprobar</button>
+        <script>
+            const comprobar = () => document.querySelectorAll('input[type="radio"]:checked').forEach(input => input.closest('p').style.backgroundColor = input.classList.contains('correcto') ? 'green':'red');
+        </script>
+    </body>
+</html>

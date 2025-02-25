@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        ¿Cuales de los siguientes lenguajes son orientados a objetos?: <span class="correcto">Java</span>, <span class="correcto">VB6</span>, C++,<span class="correcto">C</span> , C#, Cobol ?
+    </p>
+    <button type="button" onclick="mostarSoluciones()">Mostrar Soluciones</button>
+    <script>
+        const mostarSoluciones = () => document.querySelectorAll('.correcto').forEach(element => element.style.backgroundColor = 'red');
+    </script>
+</body>
+</html>

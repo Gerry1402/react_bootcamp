@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letra DNI</title>
+</head>
+<body>
+    <script>
+        let dni ='';
+        const regex = /\d\d\d\d\d\d\d\d/i;
+        console.log(regex.test(dni));
+        while (!regex.test(dni)) {
+            dni = prompt('Especificar numero de DNI (sin letra):')
+        }
+        dni = Number(dni)
+        letras = 'T, R, W, A, G, M, Y, F, P, D, X, B, N, J, Z, S, Q, V, H, L, C, K, E'
+        letra = letras[(dni%23)*3]
+        window.alert(`${dni}${letra}`)
+    </script>
+</body>
+</html>

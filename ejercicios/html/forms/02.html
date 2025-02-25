@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        form {
+            width: 400px;
+            margin: 0 auto;
+            display: flex;
+            gap: 1rem;
+            flex-direction: column;
+            align-items: center;
+            div{
+                width: 100%;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
+            input:not([type="checkbox"]), textarea {
+                width: 100%;
+            }
+            input, textarea{
+                justify-self: start;
+            }
+            textarea{
+                height: 6rem;
+            }
+            input[required="required"] {
+                border: solid 4px blue;
+            }
+            input:valid{
+                background:green;
+            }
+            input:invalid{
+                background:red;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Validación de un formulario con HTML</h1>
+    <form action="#">
+        <div>
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre" placeholder="Introduce tu nombre" required="required">
+        </div>
+        <div>
+            <label for="edad">Email:</label>
+            <input type="number" name="edad" id="edad" placeholder="Introduce tu email" required="required">
+        </div>
+        <div>
+            <label for="cp">Codigo postal:</label>
+            <input type="text" name="cp" id="cp" placeholder="Introduce tu codigo postal" required="required" pattern="^[0-9]{5}$">
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="Introduce tu email">
+        </div>
+        <div>
+            <label for="fecha">Fecha de reserva:</label>
+            <input type="date" name="fecha" id="fecha" required="required">
+        </div>
+        <div>
+            <label for="nota">Nota:</label>
+            <input type="range" name="nota" id="nota" min="0" max="10">
+        </div>
+        <button type="button">Submit</button>
+    </form>
+</body>
+</html>

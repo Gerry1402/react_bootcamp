@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            width: 400px;
+            margin: 0 auto;
+            display: flex;
+            gap: 1rem;
+            flex-direction: column;
+            align-items: center;
+            div{
+                width: 100%;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
+            input:not([type="checkbox"]), textarea {
+                width: 100%;
+            }
+            input, textarea{
+                justify-self: start;
+            }
+            textarea{
+                height: 6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Maquetación de un formulario con HTML y CSS</h1>
+    <form action="#">
+        <div>
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre" placeholder="Introduce tu nombre">
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="Introduce tu email">
+        </div>
+        <div>
+            <label for="comentarios">Comentarios:</label>
+            <textarea name="comentarios" id="comentarios" placeholder="Introduce tus comentarios"></textarea>
+        </div>
+        <div>
+            <label for="condiciones">Acepto las condiciones</label>
+        
+            <input type="checkbox" name="condiciones" id="condiciones"&>
+        
+        </div>
+        <button type="button">Submit</button>
+    </form>
+</body>
+</html>

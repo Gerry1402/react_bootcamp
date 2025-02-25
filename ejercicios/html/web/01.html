@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 1rem auto 1rem auto;
+            max-width: 1000px;
+            background-image: url(./imatges/bg.gif);
+        }
+        body *{
+            background-color: white;
+        }
+        nav, footer{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            color: black;
+            overflow: hidden;
+        }
+        nav{
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+        footer{
+            border-bottom-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+            margin-bottom: 1rem;
+        }
+        .enlaces{
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            padding: 0.5rem;
+        }
+        .enlaces li a{
+            text-decoration: none;
+            color: black;
+            padding: 1rem;
+        }
+        .enlaces li a:hover, .actual{
+            background-color: brown;
+        }
+        #carrousel{
+            width: 100%;
+            display: block;
+        }
+        h1{
+            text-align: center;
+            margin: 0;
+            padding: 1rem;
+        }
+        #divs{
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            padding: 1rem;
+        }
+        .col h2{
+            color: brown;
+        }
+        .col img{
+            width: 100%;
+        }
+
+        footer a{
+            text-decoration: none;
+            color: black;
+            padding: 1rem;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#" class="web"><img src="imatges/VUIT.png" alt=""></a>
+        <ul class="enlaces">
+            <li>
+                <a href="#" class="actual">
+                    Inici
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    Videos
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    Albums
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    Contace
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <img src="imatges/imatge_slider1.jpg" alt="" id="carrousel">
+    <h1>
+        Ejercicio HTML
+    </h1>
+    <div id="divs">
+        <div class="col">
+            <h2>Div inferior</h2>
+            <img src="imatges/pantalles_vuit_app.png" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae cumque laborum fugiat ipsa, dolores deleniti labore, laudantium in nulla sapiente aspernatur, harum incidunt debitis. Incidunt molestiae illo pariatur. Quo, facere?</p>
+        </div>
+        <div class="col">
+            <h2>Div inferior</h2>
+            <img src="imatges/pantalles_vuit_app.png" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae cumque laborum fugiat ipsa, dolores deleniti labore, laudantium in nulla sapiente aspernatur, harum incidunt debitis. Incidunt molestiae illo pariatur. Quo, facere?</p>
+        </div>
+        <div class="col">
+            <h2>Div inferior</h2>
+            <img src="imatges/pantalles_vuit_app.png" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae cumque laborum fugiat ipsa, dolores deleniti labore, laudantium in nulla sapiente aspernatur, harum incidunt debitis. Incidunt molestiae illo pariatur. Quo, facere?</p>
+        </div>
+    </div>
+    <footer>
+        <a href="#" class="web">Cibernarium.cat</a>
+        <ul class="enlaces">
+            <li>
+                <a href="#" class="actual">
+                    Inici
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    Videos
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    Albums
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    Contace
+                </a>
+            </li>
+        </ul>
+    </footer>
+</body>
+</html>

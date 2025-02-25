@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" min="0" max="5"><br>
+    <button type="button">Evaluar</button><br>
+    <p id="evaluacion" style="display: none; border: 1px solid black;"></p>
+    <script>
+        const random = Math.floor(Math.random()*6)
+        const evaluar = () => {
+            const number = Number(document.querySelector('input').value)
+            if (number == random){
+                document.querySelector('p').textContent = 'Has fallado el numero'
+            }
+        }
+    </script>
+</body>
+</html>
